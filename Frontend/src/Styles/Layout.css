@@ -1,5 +1,4 @@
 main {
-    padding-top: 84px; /* height of fixed navbar */
-    min-height: calc(100vh - 84px);
-    background-color: var(--beige);
+    flex: 1;
+    background-color: var(--beige-soft);
 }
