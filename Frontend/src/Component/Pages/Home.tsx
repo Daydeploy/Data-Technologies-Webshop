@@ -1,14 +1,16 @@
 import '../../Styles/Home.css';
-import Products from '../../Component/Products';
+import SearchBar from '../Home/SearchBar';
+import FeaturedSection from '../Home/FeaturedSection';
+import CatalogueSection from '../Home/CatalogueSection';
 
-const Home = () => 
-{
+const Home = () => {
     return (
-        <div className="home-content">
-            <img src="" className="Sale-content"/>
-            <section className="border-img"></section>
-            <Products/>
+        <div className="Home">
+            <SearchBar />
+            <FeaturedSection />
+            <CatalogueSection />
         </div>
     );
-}
+};
+
 export default Home;

@@ -1,4 +1,5 @@
 main {
-    padding-top: 120px; /* height of your fixed navbar */
-    padding-bottom: 80px; /* height of footer if needed */
+    padding-top: 84px; /* height of fixed navbar */
+    min-height: calc(100vh - 84px);
+    background-color: var(--beige);
 }
