@@ -1,7 +1,7 @@
 .Footer {
-    background-color: var(--dark-green);
-    color: var(--beige);
-    padding: 64px 32px 24px;
+    background-color: var(--white);
+    border-top: 1px solid rgba(15, 61, 46, 0.1);
+    padding: 64px 32px 32px;
 }
 
 .sr-only {
@@ -16,127 +16,126 @@
     border: 0;
 }
 
+.Footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .Footer-top {
     display: grid;
-    grid-template-columns: 1.2fr 2fr;
-    gap: 48px;
-    max-width: 1280px;
-    margin: 0 auto;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 64px;
     padding-bottom: 48px;
-    border-bottom: 1px solid rgba(245, 245, 220, 0.12);
+    border-bottom: 1px solid rgba(15, 61, 46, 0.1);
 }
 
 /* Newsletter */
 .Footer-newsletter {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
-.Footer-eyebrow {
-    font-family: var(--font-sans);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--mint);
-}
-
-.Footer-headline {
+.Footer-brand {
     font-family: var(--font-display);
-    font-size: clamp(24px, 2.8vw, 32px);
-    line-height: 1.15;
-    color: var(--beige);
+    font-style: italic;
+    font-size: 24px;
+    color: var(--dark-green);
     letter-spacing: -0.3px;
-    max-width: 14ch;
 }
 
-.Footer-subtitle {
+.Footer-tagline {
     font-family: var(--font-sans);
     font-size: 14px;
-    color: var(--beige);
-    opacity: 0.7;
-    max-width: 38ch;
+    color: var(--black);
+    opacity: 0.6;
+    max-width: 28ch;
     line-height: 1.6;
 }
 
 .Footer-form {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0;
     margin-top: 8px;
-    background-color: var(--white);
-    border-radius: 999px;
-    padding: 6px 6px 6px 18px;
-    max-width: 420px;
+    max-width: 360px;
 }
 
 .Footer-input {
     flex: 1;
-    border: none;
+    border: 1px solid rgba(15, 61, 46, 0.2);
+    border-right: none;
     outline: none;
-    background: transparent;
+    background: var(--white);
     font-family: var(--font-sans);
     font-size: 14px;
     color: var(--dark-green);
-    padding: 10px 4px;
+    padding: 14px 16px;
+    border-radius: 0;
+    transition: border-color 0.15s ease;
+}
+
+.Footer-input:focus {
+    border-color: var(--dark-green);
 }
 
 .Footer-input::placeholder {
-    color: var(--dark-green);
-    opacity: 0.45;
+    color: var(--black);
+    opacity: 0.4;
 }
 
 .Footer-submit {
     font-family: var(--font-sans);
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: var(--dark-green);
-    background-color: var(--mint);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 999px;
-    transition: background-color 0.15s ease;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--dark-green);
+    border: 1px solid var(--dark-green);
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .Footer-submit:hover {
-    background-color: var(--beige);
+    background-color: transparent;
+    color: var(--dark-green);
 }
 
 /* Columns */
 .Footer-columns {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
 .Footer-col-title {
-    font-family: var(--font-display);
-    font-size: 14px;
-    letter-spacing: 2px;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: var(--mint);
-    margin-bottom: 16px;
+    color: var(--black);
+    opacity: 0.5;
+    margin-bottom: 20px;
 }
 
 .Footer-col ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .Footer-col a {
     font-family: var(--font-sans);
     font-size: 14px;
-    color: var(--beige);
-    opacity: 0.8;
-    transition: opacity 0.15s ease, color 0.15s ease;
+    color: var(--dark-green);
+    transition: color 0.15s ease;
 }
 
 .Footer-col a:hover {
-    opacity: 1;
     color: var(--mint);
 }
 
@@ -146,47 +145,20 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding-top: 24px;
+    padding-top: 32px;
     flex-wrap: wrap;
-}
-
-.Footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: var(--font-display);
-    letter-spacing: 2px;
-    color: var(--beige);
-}
-
-.Footer-brand-mark {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
-    background-color: var(--mint);
-    color: var(--dark-green);
-    font-size: 16px;
-}
-
-.Footer-brand-text {
-    font-size: 16px;
 }
 
 .Footer-copy {
     font-family: var(--font-sans);
     font-size: 13px;
-    color: var(--beige);
-    opacity: 0.6;
+    color: var(--black);
+    opacity: 0.5;
 }
 
 .Footer-socials {
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
 
 .Footer-social {
@@ -196,47 +168,62 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    border: 1px solid rgba(245, 245, 220, 0.25);
-    color: var(--beige);
+    border: 1px solid rgba(15, 61, 46, 0.15);
+    color: var(--dark-green);
     transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .Footer-social:hover {
-    background-color: var(--mint);
-    color: var(--dark-green);
-    border-color: var(--mint);
+    background-color: var(--dark-green);
+    color: var(--white);
+    border-color: var(--dark-green);
 }
 
 /* Responsive */
 @media (max-width: 960px) {
     .Footer {
-        padding: 48px 20px 20px;
+        padding: 48px 24px 24px;
     }
 
     .Footer-top {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 48px;
+    }
+
+    .Footer-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
     }
 }
 
 @media (max-width: 560px) {
+    .Footer {
+        padding: 40px 20px 20px;
+    }
+
     .Footer-columns {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         gap: 24px;
     }
 
     .Footer-bottom {
         flex-direction: column;
         align-items: flex-start;
-        gap: 12px;
+        gap: 16px;
     }
 
     .Footer-form {
-        flex-wrap: wrap;
-        border-radius: 16px;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .Footer-input {
+        width: 100%;
+        border-right: 1px solid rgba(15, 61, 46, 0.2);
+        border-bottom: none;
     }
 
     .Footer-submit {
-        flex: 1;
+        width: 100%;
     }
 }
