@@ -4,10 +4,6 @@ import '../../Styles/Navbar.css';
 
 const navLinks = [
     { label: 'Shop', to: '/' },
-    { label: 'New', to: '/' },
-    { label: 'Sale', to: '/' },
-    { label: 'Journal', to: '/' },
-    { label: 'About', to: '/about' },
 ];
 
 const Navbar = () => {
